@@ -38,8 +38,9 @@ public class Libreria {
 	
 	
 	public void mostrarLibros() {
+		System.out.println("Los libros que hay en la libreria son: \n");
+
 		for(Book libro: libros) {
-			System.out.println("Los libros que hay en la libreria son: \n");
 			System.out.println(libro.getAuthor() + ": " + libro.getTitle());
 		}
 	}

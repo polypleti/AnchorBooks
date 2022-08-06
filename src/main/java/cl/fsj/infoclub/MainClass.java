@@ -11,8 +11,11 @@ public class MainClass {
 		libreria.mostrarLibros();
 		System.out.println("\n*************************");
 		libreria.dosLibros(3,8);
+		System.out.println("\n*************************");
 		libreria.mostrarLibrosAPI();
+		System.out.println("\n*************************");
 		libreria.mostrarLibrosUnknown();
+		System.out.println("\n*************************");
 		libreria.mostrarLibrosDelivery();
 	}
 

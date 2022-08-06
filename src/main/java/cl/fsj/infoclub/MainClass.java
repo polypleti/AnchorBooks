@@ -15,13 +15,9 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target("https://my-json-server.typicode.com/Himuravidal/anchorBooks").path("books");
-		Invocation.Builder invocacionBuilder = target.request(MediaType.APPLICATION_JSON);
-		Response respuestaAPI = invocacionBuilder.get();
+		Libreria libreria = new Libreria();
+		libreria.guardarLibrosAPI();
 		
-		List<Book> lista = respuestaAPI.readEntity(new GenericType<List<Book>>(){});
-		System.out.println(lista.get(0));
 	}
 
 }

@@ -5,6 +5,7 @@ public class BookDetail {
 	Integer id, pages, year, price, lastPrice;
 	String author, country, imageLink, language, link, title;
 	Boolean delivery;
+	
 	public Integer getId() {
 		return id;
 	}

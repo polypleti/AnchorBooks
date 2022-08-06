@@ -8,6 +8,7 @@ public class MainClass {
 		
 		Libreria libreria = new Libreria();
 		libreria.guardarLibrosAPI();
+		libreria.guardarDetallesLibros();
 		libreria.mostrarLibros();
 		System.out.println("\n*************************");
 		libreria.dosLibros(3,8);

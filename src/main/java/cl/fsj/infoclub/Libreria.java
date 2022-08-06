@@ -57,7 +57,7 @@ public class Libreria {
 	public void mostrarLibrosAPI() {
 		ArrayList<BookDetail> librosAPI;
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target("https://my-json-server.typicode.com/Himuravidal/anchorBooks").path("books");
+		WebTarget target = client.target("https://my-json-server.typicode.com/Himuravidal/anchorBooks").path("bookDetail");
 		Invocation.Builder invocacionBuilder = target.request(MediaType.APPLICATION_JSON);
 		Response respuestaAPI = invocacionBuilder.get();
 		librosAPI = respuestaAPI.readEntity(new GenericType<ArrayList<BookDetail>>(){});
@@ -79,7 +79,7 @@ public class Libreria {
 	public void mostrarLibrosDelivery() {
 		System.out.println("Los libros que tienen delivery disponible son: \n");
 		for(BookDetail libro: detalleLibros) {
-			if(libro.getDelivery())
+			if(libro.getDelivery() == true)
 				System.out.println(libro.getAuthor() + ": " + libro.getTitle());
 		}
 	}

@@ -80,9 +80,9 @@ public class BookDetail {
 	}
 	@Override
 	public String toString() {
-		return "BookDetail [id=" + id + ", pages=" + pages + ", year=" + year + ", price=" + price + ", lastPrice="
-				+ lastPrice + ", author=" + author + ", country=" + country + ", imageLink=" + imageLink + ", language="
-				+ language + ", link=" + link + ", title=" + title + ", delivery=" + delivery + "]";
+		return "ID: " + id + "/ Paginas: " + pages + "/ Ano: " + year + "/ Precio: " + price + "/ Ultimo Precio: "
+				+ lastPrice + "/ Autor: " + author + "/ Pais: " + country + "/ Imagen: " + imageLink + "/ Idioma: "
+				+ language + "/ Zelda: " + link + "/ Titulo: " + title + "/ Delivery? :" + delivery;
 	}
 	
 }

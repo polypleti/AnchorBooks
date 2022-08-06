@@ -63,7 +63,7 @@ public class Libreria {
 		librosAPI = respuestaAPI.readEntity(new GenericType<ArrayList<BookDetail>>(){});
 		System.out.println("Los Libros del API son: ");
 		for(BookDetail libro: librosAPI) {
-			System.out.println("\n " + libro);
+			System.out.println("\n" + libro);
 		}
 	}
 	

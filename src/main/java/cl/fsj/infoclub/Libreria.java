@@ -61,7 +61,7 @@ public class Libreria {
 		Invocation.Builder invocacionBuilder = target.request(MediaType.APPLICATION_JSON);
 		Response respuestaAPI = invocacionBuilder.get();
 		librosAPI = respuestaAPI.readEntity(new GenericType<ArrayList<BookDetail>>(){});
-		System.out.println("\n " + librosAPI);
+		System.out.println("\n Los Libros del API son: ");
 		for(BookDetail libro: librosAPI) {
 			System.out.println("\n " + libro);
 		}

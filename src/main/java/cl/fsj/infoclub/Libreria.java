@@ -45,4 +45,13 @@ public class Libreria {
 		}
 	}
 	
+	public void dosLibros(int pos1, int pos2) {
+		System.out.println("Libro número "+pos1+": "+libros.get(pos1).getAuthor()+", "
+				+libros.get(pos1).getTitle()+", "+libros.get(pos1).getCountry()
+		);
+		System.out.println("Libro número "+pos2+": "+libros.get(pos2).getAuthor()+", "
+				+libros.get(pos2).getTitle()+", "+libros.get(pos2).getCountry()
+		);
+	}
+	
 }

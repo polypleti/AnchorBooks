@@ -33,11 +33,15 @@ public class Libreria {
 		WebTarget target = client.target("https://my-json-server.typicode.com/Himuravidal/anchorBooks").path("bookDetail");
 		Invocation.Builder invocacionBuilder = target.request(MediaType.APPLICATION_JSON);
 		Response respuestaAPI = invocacionBuilder.get();
-		
 		detalleLibros = respuestaAPI.readEntity(new GenericType<ArrayList<BookDetail>>(){});
 	}
 	
 	
-	
+	public void mostrarLibros() {
+		for(Book libro: libros) {
+			System.out.println("Los libros que hay en la libreria son: \n");
+			System.out.println(libro.getAuthor() + ": " + libro.getTitle());
+		}
+	}
 	
 }

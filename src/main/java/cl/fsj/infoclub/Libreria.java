@@ -12,8 +12,8 @@ import javax.ws.rs.core.Response;
 
 public class Libreria {
 	
-	ArrayList <Book> libros = new ArrayList<Book>();
-	ArrayList <BookDetail> detalleLibros = new ArrayList <BookDetail>();
+	private ArrayList <Book> libros = new ArrayList<Book>();
+	private ArrayList <BookDetail> detalleLibros = new ArrayList <BookDetail>();
 
 	public Libreria() {
 		super();
@@ -54,4 +54,33 @@ public class Libreria {
 		);
 	}
 	
+	public void mostrarLibrosAPI() {
+		ArrayList<BookDetail> librosAPI;
+		Client client = ClientBuilder.newClient();
+		WebTarget target = client.target("https://my-json-server.typicode.com/Himuravidal/anchorBooks").path("books");
+		Invocation.Builder invocacionBuilder = target.request(MediaType.APPLICATION_JSON);
+		Response respuestaAPI = invocacionBuilder.get();
+		librosAPI = respuestaAPI.readEntity(new GenericType<ArrayList<BookDetail>>(){});
+		System.out.println("\n " + librosAPI);
+		for(BookDetail libro: librosAPI) {
+			System.out.println("\n " + libro);
+		}
+	}
+	
+	
+	public void mostrarLibrosUnknown() {
+		System.out.println("Los libros que tienen autor desconocido son: \n");
+		for(Book libro: libros) {
+			if(libro.getAuthor().equalsIgnoreCase("Unknown"))
+				System.out.println(libro.getAuthor() + ": " + libro.getTitle());
+		}
+	}
+	
+	public void mostrarLibrosDelivery() {
+		System.out.println("Los libros que tienen delivery disponible son: \n");
+		for(BookDetail libro: detalleLibros) {
+			if(libro.getDelivery())
+				System.out.println(libro.getAuthor() + ": " + libro.getTitle());
+		}
+	}
 }

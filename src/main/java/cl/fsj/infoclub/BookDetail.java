@@ -2,9 +2,9 @@ package cl.fsj.infoclub;
 
 public class BookDetail {
 
-	Integer id, pages, year, price, lastPrice;
-	String author, country, imageLink, language, link, title;
-	Boolean delivery;
+	private Integer id, pages, year, price, lastPrice;
+	private String author, country, imageLink, language, link, title;
+	private Boolean delivery;
 	
 	public Integer getId() {
 		return id;

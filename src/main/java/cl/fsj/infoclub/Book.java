@@ -1,8 +1,8 @@
 package cl.fsj.infoclub;
 
 public class Book {
-	Integer id;
-	String author, country, imageLink, language, title;
+	private Integer id;
+	private String author, country, imageLink, language, title;
 	
 	public Integer getId() {
 		return id;

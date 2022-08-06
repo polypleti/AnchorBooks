@@ -11,6 +11,9 @@ public class MainClass {
 		libreria.mostrarLibros();
 		System.out.println("\n*************************");
 		libreria.dosLibros(3,8);
+		libreria.mostrarLibrosAPI();
+		libreria.mostrarLibrosUnknown();
+		libreria.mostrarLibrosDelivery();
 	}
 
 }
